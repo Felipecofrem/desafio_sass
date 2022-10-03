@@ -1,0 +1,61 @@
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+$primary: $blue !default;
+$secundary: $gray-600 !default;
+$success: $green !default;
+$info: $cyan !default;
+$warning: $yellow !default;
+$danger: $red !default;
+$light: $gray-100 !default;
+$dark: $gray-900 !default;
+$purple: #cf649a;
+$deep-purple: $purple-800 !default; /*my new color*/
+$font-main: 'Merienda One'; /*my new font*/
+$padding-half: 0.5rem;
+$padding-full: 1rem;
+$margin-half: 0.5rem;
+
+$theme-colors: (
+"primary": $primary,
+"secundary": $gray-600,
+"success": $green,
+"info": $cyan,
+"warning": $yellow,
+"danger": $red,
+"light": $gray-100,
+"dark": $gray-900,
+"purple": $purple,
+"deep-purple": $deep-purple /*my new color call*/
+) !default;
+
+
+h1 {
+    padding: $padding-full;
+    color: $primary;
+}
+
+.card {
+    background-color: $dark;
+    color:$purple;
+    margin: 0 auto;
+}
+
+.card-title {
+    font-family:$font-main;
+    margin:$margin-half;
+}
+
+p {
+    @extend .card-title;    
+    color:$light;   
+}
+
+.btn {
+    @extend p;
+    background: $deep-purple;
+    padding: $padding-half;
+}
+
+.card-img-top {
+    padding:$padding-full;
+}
